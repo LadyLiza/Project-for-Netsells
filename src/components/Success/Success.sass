@@ -1,0 +1,36 @@
+@use "~~/assets/styles/variables"
+
+.the-success
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    &__title
+        margin-bottom: 5px
+        font-family: "Oswald"
+        font-size: 28px
+        color: variables.$liveColor
+
+    &__subtitle
+        margin-bottom: 12px
+        font-family: "Heebo"
+        font-size: 60px
+        font-weight: 900
+
+        .light &
+            color: variables.$lightSchemeExtraGray
+
+        .dark &
+            color: #f4f4f4
+
+    &__message
+        margin-bottom: 65px
+        font-family: "Oswald"
+        font-size: 22px
+
+        .light &
+            color: variables.$darkSchemeLightGray
+
+        .dark &
+            color: #f4f4f4

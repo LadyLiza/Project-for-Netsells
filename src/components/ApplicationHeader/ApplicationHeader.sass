@@ -1,0 +1,23 @@
+@use "~~/assets/styles/variables"
+
+.application-header
+	font-family: "Oswald"
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 30px
+	position: relative
+
+	.light &
+		color: variables.$darkSchemeLightGray
+
+	.dark &
+		color: #767676
+
+	div:first-child
+		position: absolute
+		left: 35px
+		font-size: 22px
+
+	div:last-child
+		font-size: 16px

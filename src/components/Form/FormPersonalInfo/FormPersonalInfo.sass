@@ -1,0 +1,53 @@
+@use "~~/assets/styles/variables"
+
+.form-personal-info
+	width: 485px
+
+	&__field
+		margin-bottom: 30px
+
+		.Mui-focused .MuiOutlinedInput-notchedOutline
+			.light &
+				border-color: #d4d4d4
+				color: variables.$lightSchemeExtraGray
+
+			.dark &
+				border-color: #4a4a4a
+				color: #f4f4f4
+
+		.MuiTextField-root
+			width: 100%
+
+		.MuiInputBase-input
+			background: transparent
+			height: 23px
+			font-family: "Oswald"
+			font-size: 20px
+			border-radius: 0
+
+			.light &
+				border-color: #d4d4d4
+				color: variables.$lightSchemeExtraGray
+
+			.dark &
+				border-color: #4a4a4a
+				color: #f4f4f4
+
+	&__field-title
+		margin-bottom: 20px
+		font-family: "Oswald"
+		font-size: 22px
+
+		.light &
+			color: variables.$lightSchemeExtraGray
+
+		.dark &
+			color: #f4f4f4
+
+		&.required:after
+			content: '*'
+			color: variables.$liveColor
+
+	&__actions
+		display: flex
+		justify-content: flex-end

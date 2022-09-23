@@ -1,0 +1,103 @@
+@use "~~/assets/styles/variables"
+
+.application-step-info
+	border-radius: 10px
+
+	&+&
+		margin-left: 85px
+
+	.light &
+		background: url(#{variables.$assetPath}/white-scheme/background-common.png) no-repeat
+
+	.dark &
+		background: url(#{variables.$assetPath}/dark-scheme/background-common.png) no-repeat
+
+	&__wrapper
+		width: 300px
+		height: 320px
+		box-sizing: border-box
+		border: 3px solid
+		border-top-right-radius: 5px
+		border-top-left-radius: 5px
+		border-bottom: none
+		padding: 45px 40px
+
+		.light &
+			border-color: #ebebeb
+
+		.dark &
+			border-color: #383838
+
+		.application-step-info
+			&__progress-bar
+				margin-bottom: 40px
+
+			&__title
+				font-family: "Oswald"
+				font-size: 18px
+
+				.light &
+					color: #6d6d6d
+
+				.dark &
+					color: #c6c6c6
+
+			&__subtitle
+				font-family: "Heebo"
+				box-sizing: content-box
+				height: 88px
+				font-weight: bold
+				font-size: 30px
+
+				.light &
+					color: variables.$lightSchemeExtraGray
+
+				.dark &
+					color: #f4f4f4
+
+			&__details
+				font-family: "Oswald"
+				font-size: 16px
+
+				.light &
+					color: #6d6d6d
+
+				.dark &
+					color: variables.$darkSchemeLightGray
+
+	&__action
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 70px
+		border-bottom-right-radius: 5px
+		border-bottom-left-radius: 5px
+		cursor: pointer
+
+		&_arrow-icon
+			width: 22px
+			height: 7px
+			margin-top: 6px
+
+			.light &
+				background: url(#{variables.$assetPath}/white-scheme/arrow-right.svg) no-repeat
+
+			.dark &
+				background: url(#{variables.$assetPath}/dark-scheme/arrow-right.svg) no-repeat
+
+		&-text
+			margin-right: 10px
+			font-family: "Oswald"
+			font-size: 20px
+
+			.light &
+				color: variables.$lightSchemeExtraGray
+
+			.dark &
+				color: #c8c8c8
+
+		.light &
+			background-color: variables.$lightSchemeLightGray
+
+		.dark &
+			background-color: variables.$darkSchemeGray

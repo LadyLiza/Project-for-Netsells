@@ -1,0 +1,93 @@
+@use "~~/assets/styles/variables"
+
+.form-additional-files
+	.step-header
+		margin-bottom: 110px
+
+	&__field+&__field
+		margin-top: 75px
+
+	.form-additional-files__upload-button
+		height: 220px
+		width: 485px
+		background-color: transparent
+		box-shadow: 0
+		border: 1px solid #d4d4d4
+		display: flex
+		color: #464646
+		text-transform: none
+
+		&:hover
+			background-color: transparent
+			color: white
+
+	&__field
+		&-title-wrapper
+			display: flex
+			align-items: center
+			justify-content: center
+
+		&-title-wrapper &-icon
+			margin-right: 20px
+
+		&-title
+			font-family: "Oswald"
+			font-size: 22px
+			max-width: 400px
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
+
+			&-wrapper
+				margin-bottom: 10px
+
+			.light &
+				color: variables.$lightSchemeExtraGray
+
+			.dark &
+				color: #f4f4f4
+
+		&-subtitle
+			font-family: "Oswald"
+			font-size: 16px
+			color: variables.$darkSchemeLightGray
+
+		&-upload-link
+			color: variables.$liveColor
+
+		&_empty, &_uploaded
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+
+		&_empty &-icon
+			.light &
+				background: url(#{variables.$assetPath}/white-scheme/file-empty.svg) no-repeat
+
+			.dark &
+				background: url(#{variables.$assetPath}/dark-scheme/file-empty.svg) no-repeat
+
+		&_uploaded &-icon
+			.light &
+				background: url(#{variables.$assetPath}/white-scheme/file-uploaded.svg) no-repeat
+
+			.dark &
+				background: url(#{variables.$assetPath}/dark-scheme/file-uploaded.svg) no-repeat
+
+		&-icon
+			position: relative
+			width: 16px
+			height: 20px
+
+			&.required:after
+				position: absolute
+				left: 18px
+				top: -8px
+				content: "*"
+				color: #e16969
+
+	&__actions
+		display: flex
+		justify-content: flex-end
+		margin-top: 55px

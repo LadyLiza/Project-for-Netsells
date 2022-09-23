@@ -1,0 +1,62 @@
+@use "~~/assets/styles/variables"
+
+.app
+    position: relative
+    min-height: calc(100vh - #{variables.$applicationPadding * 2})
+    height: auto
+    padding: variables.$applicationPadding
+
+    &.light
+        &.start
+            background: url(#{variables.$assetPath}/white-scheme/background-start.png) no-repeat
+            background-size: 100% 100%
+
+        &.common
+            background: url(#{variables.$assetPath}/white-scheme/background-common.png) no-repeat
+            background-size: 100% 100%
+
+        &.success
+            background: url(#{variables.$assetPath}/white-scheme/background-success.png) no-repeat
+            background-size: 100% 100%
+
+        ::-webkit-input-placeholder
+            color: variables.$darkSchemeLightGray
+
+        :-moz-placeholder
+            color: variables.$darkSchemeLightGray
+
+        ::-moz-placeholder
+            color: variables.$darkSchemeLightGray
+
+        :-ms-input-placeholder
+            color: variables.$darkSchemeLightGray
+
+    &.dark
+        &.start
+            background: url(#{variables.$assetPath}/dark-scheme/background-start.png) no-repeat
+            background-size: 100% 100%
+
+        &.common
+            background: url(#{variables.$assetPath}/dark-scheme/background-common.png) no-repeat
+            background-size: 100% 100%
+
+        &.success
+            background: url(#{variables.$assetPath}/dark-scheme/background-success.png) no-repeat
+            background-size: 100% 100%
+
+        ::-webkit-input-placeholder
+            color: #737373
+
+        :-moz-placeholder
+            color: #737373
+
+        ::-moz-placeholder
+            color: #737373
+
+        :-ms-input-placeholder
+            color: #737373
+
+.app__component
+    display: flex
+    align-items: center
+    justify-content: center

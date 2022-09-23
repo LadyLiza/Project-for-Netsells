@@ -1,0 +1,30 @@
+@use "~~/assets/styles/variables"
+
+.scheme-switcher
+	position: fixed
+	bottom: variables.$applicationPadding
+	left: variables.$applicationPadding
+	display: flex
+
+	&__icon-wrapper
+		padding: 5px
+		cursor: pointer
+		margin-right: 20px
+
+	&__icon, &__icon-wrapper, .MuiBadge-root
+		display: flex
+		align-items: center
+		justify-content: center
+
+	&__icon-moon-badge .MuiBadge-badge, &__icon-sun-badge .MuiBadge-badge
+		background-color: #F56C6C
+		height: 10px
+		width: 10px
+		border-radius: 50%
+
+	&__icon-moon-badge .MuiBadge-badge
+		left: -9px
+		border: 1px solid #303030
+
+	&__icon-sun-badge .MuiBadge-badge
+		left: 12px

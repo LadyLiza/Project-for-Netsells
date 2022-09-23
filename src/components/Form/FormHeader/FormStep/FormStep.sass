@@ -1,0 +1,44 @@
+@use "~~/assets/styles/variables"
+
+.form-step
+	height: 90px
+	border: 2px solid
+	border-radius: 5px
+	display: flex
+	padding: 20px 95px
+	width: 300px
+	box-sizing: border-box
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	cursor: pointer
+
+	&+&
+		margin-left: 85px
+
+	.light &
+		border-color: #ebebeb
+		background: url(#{variables.$assetPath}/white-scheme/background-common.png) no-repeat
+		background-size: 100% 100%
+
+	.dark &
+		border-color: #383838
+		background: url(#{variables.$assetPath}/dark-scheme/background-common.png) no-repeat
+		background-size: 100% 100%
+
+	&.selected
+		border-color: variables.$liveColor
+
+	&__title
+		margin-bottom: 15px
+		font-family: "Oswald"
+		font-size: 18px
+
+		.light &
+			color: #6d6d6d
+
+		.dark &
+			color: #c6c6c6
+
+	&__progress-bar
+		width: 100%

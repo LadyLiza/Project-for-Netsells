@@ -1,0 +1,22 @@
+@use "~~/assets/styles/variables"
+
+.progress-bar
+	position: relative
+	height: 10px
+
+	&__empty, &__filled
+		height: 10px
+		border-radius: 5px
+
+	&__empty
+		background-color: variables.$lightSchemeExtraLightGray
+		width: 100%
+
+		.dark &
+			background-color: variables.$darkSchemeExtraGray
+
+	&__filled
+		position: absolute
+		top: 0
+		left: 0
+		background-color: variables.$liveColor

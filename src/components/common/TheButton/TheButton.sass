@@ -1,0 +1,20 @@
+@use "~~/assets/styles/variables"
+
+.the-button
+	border: none
+	background-color: variables.$liveColor
+	color: white
+	font-family: "Oswald"
+	display: flex
+	justify-content: center
+	align-items: center
+	cursor: pointer
+
+	&:active, &:focus
+		color: white
+
+	&:hover
+		color: variables.$lightSchemeGray
+
+	&:hover, &:focus, &:active
+		background-color: variables.$liveColor

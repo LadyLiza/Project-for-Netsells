@@ -1,0 +1,40 @@
+@use "~~/assets/styles/variables"
+
+.applications_steps
+	&__header
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+		.applications_steps
+			&__title
+				font-family: "Heebo"
+				font-size: 30px
+				font-weight: bold
+
+				.light &
+					color: variables.$lightSchemeExtraGray
+
+				.dark &
+					color: #f4f4f4
+
+			&__subtitle
+				font-family: "Oswald"
+				font-weight: 16px
+				margin-bottom: 80px
+
+				.light &
+					color: #8d8d8d
+
+				.dark &
+					color: variables.$darkSchemeLightGray
+
+	&__steps
+		display: flex
+
+	&__actions
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-top: 65px
